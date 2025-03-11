@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>自然灾害信息公开网站</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/Get.js"></script>
+    <script src="js/userBarCtrl.js"></script>
+    <script src="js/PageCtrl.js"></script>
+</head>
+<body>
+<div class="container" style="width: 100%;">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1"><span
+                        class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="/index">灾害信息公开</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/piyao">辟谣中心</a>
+                    </li>
+                    <li class="active">
+                        <a href="#materials">急需物资</a>
+                    </li>
+                    <li>
+                        <a href="#situation">救援情况</a>
+                    </li>
+                    <li>
+                        <a href="#message">留言板</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="login">
+                        <a href="/login">登录</a>
+                    </li>
+                    <li class="dropdown modelList"><!--style="visibility: hidden"-->
+                        <a id="displayName" href="#" class="dropdown-toggle" data-toggle="dropdown">username<strong
+                                class="caret"></strong></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="carousel slide carouselDIY" id="carousel-92226">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#carousel-92226">
+                    </li>
+                    <li data-slide-to="1" data-target="#carousel-92226">
+                    </li>
+                    <li data-slide-to="2" data-target="#carousel-92226">
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img alt="" src="img/悼念.png"/>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="img/救援.png"/>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="img/灰色.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 103px;"></div>
+    <div class="row clearfix">
+        <div class="msgTitle">
+            权威发布
+            <a href="/authoritative" style="float: right; font-size: 20px; padding-top: 7px; margin-right: 7px">查看更多</a>
+        </div>
+        <div class="col-md-6 column shadow" style="left: 200px;">
+            <div id="authoritative" style="height: 266px; line-height: 32px">
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+            </div>
+        </div>
+        <div class="msgTitle2" id="situation">
+            救援情况
+            <a href="/rescue" style="float: right; font-size: 20px; padding-top: 7px; margin-right: 7px">查看更多</a>
+        </div>
+        <div class="col-md-6 column shadow" style="left: 300px;">
+            <div id="rescue" style="height: 266px; line-height: 32px">
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+                <div class="item1">
+                    <a href="#">
+                        <div class="item_title">alalalalalalal</div>
+                    </a>
+                    <div class="item_time">2022-4-11</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 50px"></div>
+    <div class="materials" id="materials">急需物资</div>
+    <div>
+        <div class="jumbotron well" style="position: relative">
+            <h2>
+                各位充满爱心的人士，您好！
+            </h2>
+            <p style="width: 65%">
+                经过我们部门内部资源共享与调度后，所需物资仍有较大缺口，现将急需以及数量巨大的物资进行公示。我们对您表示感谢，一双援助之手将拯救无数生命，小心谨慎的声音会影响无数的心.
+                <br>望各位爱心的人士可以联系400-000-0000，或在网站提交请求与我们取得联系.
+            </p>
+            <table class="table table">
+                <tr>
+                    <td>物资列表</td>
+                    <td>数量</td>
+                    <td>列名</td>
+                </tr>
+                <tr>
+                    <td>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+            </table>
+            <p>
+                <a class="btn btn-primary btn-large" href="#">查看更多</a>
+            </p>
+        </div>
+    </div>
+
+    <div style="height: 50px"></div>
+    <div class="materials" id="message">留言板</div>
+    <div id="textarea"></div>
+    <div style="height: 60px;border-bottom: 1px #e5e4e4 solid;">
+        <a href="/login" class="textLogin">登录</a>
+    </div>
+    <div class="paging">
+        <div style="width: 50%">
+            <label>
+                <select class="pageSize">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+                <span>每页评论数</span>
+            </label>
+        </div>
+        <div class="pageNum">
+            <span title="上一页" class="disabled" id="up"><&nbsp;</span>
+            <label>
+                <span>页数</span>
+                <select class="currPage">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <span class="realPageNum">/ 17 </span>
+            </label>
+            <span title="下一页" class="pageSpan" id="down">&nbsp;></span>
+        </div>
+    </div>
+
+    <div class="mediaBox">
+        <div class="media well">
+            <div class="media-body mediaDiv">
+                <h3 class="media-heading displayName">
+                    username
+                </h3>
+                <div class="time">2022-4-12 11:11:11</div>
+            </div>
+            <div class="msg">留言内容</div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    //设置轮播滚动时间间隔（毫秒）
+    $(".carousel").carousel({
+        interval: 3000
+    })
+</script>
+</html>

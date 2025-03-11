@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>登录&注册</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+<h2></h2>
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <div class="form">
+      <h1>创建账户</h1>
+      <input type="text" placeholder="请输入手机号" id="tel" oninput="value=value.replace(/[^\d]/g,'')">
+      <input type="text" placeholder="请输入验证码" class="inputchecking" id="check" oninput="value=value.replace(/[^\d]/g,'')">
+      <input type="password" placeholder="请输入密码" id="password">
+      <button onclick="LegalCheck()">注册</button>
+    </div>
+    <button class="buttonchecking">获取验证码</button>
+  </div>
+  <div class="form-container sign-in-container">
+    <div class="form">
+      <h1>登 录</h1>
+      <input type="text" placeholder="请输入您的手机号" id="login-tel">
+      <input type="password" placeholder="请输入密码" id="login-password">
+      <a href="#">忘记密码？</a>
+      <button onclick="Login()">登 录</button>
+    </div>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>欢 迎 注 册！</h1>
+        <p>如需与我们取得联系，请确保使用您的真实信息注册！</p>
+        <button class="ghost" id="signIn">登 录</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>您&nbsp&nbsp好 !</h1>
+        <p style="height: 10px">请登录进行反馈以及获取更多信息</p>
+        <p style="height: 1px">没有账户请点击下方进行注册</p>
+        <button class="ghost" id="signUp">注 册</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/checking.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>

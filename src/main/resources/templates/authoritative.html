@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权威发布</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/more.css">
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/more.js"></script>
+    <script src="js/userBarCtrl.js"></script>
+    <script src="js/PageCtrl.js"></script>
+
+</head>
+<body>
+<div class="container" style="width: 100%;">
+    <div class="shadow">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"><span
+                    class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                    class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="/index">灾害信息公开</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/piyao">辟谣中心</a>
+                </li>
+                <li class="active">
+                    <a href="/index#materials">急需物资</a>
+                </li>
+                <li>
+                    <a href="/index#situation">救援情况</a>
+                </li>
+                <li>
+                    <a href="/index#message">留言板</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="login">
+                    <a href="/login">登录</a>
+                </li>
+                <li class="dropdown modelList"><!--style="visibility: hidden"-->
+                    <a id="displayName" href="#" class="dropdown-toggle" data-toggle="dropdown">username<strong
+                            class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="height: 50px"></div>
+
+    <div id="article">
+        <div class="articleBox">
+            <div class="newsTitle">
+                <a href="#">关于XXX区的救援进度</a>
+                <p>政府办公室</p>
+            </div>
+            <div class="newsText">主体内容</div>
+            <div class="newsInfo">
+                <p>时间</p>
+                <a>阅读全文</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="paging">
+        <div style="width: 50%">
+            <label>
+                <select class="pageSize">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+                <span>每页数量</span>
+            </label>
+        </div>
+        <div class="pageNum">
+            <span title="上一页" class="disabled" id="up"><&nbsp;</span>
+            <label>
+                <span>页数</span>
+                <select class="currPage">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <span class="realPageNum">/ 17 </span>
+            </label>
+            <span title="下一页" class="pageSpan" id="down">&nbsp;></span>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    sessionStorage.setItem("page", "auth")
+    $(document).ready(function (){
+        DetailsList("/Article/selectReleaseByPage", "auth");
+        ChangeSpanAndOption("/Article/selectAllNum");
+    })
+</script>
+</html>

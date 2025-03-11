@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>待救援界面</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/rescue_need.css">
+
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/rescue_need.js"></script>
+    <script src="js/userBarCtrl.js"></script>
+    <script src="js/PageCtrl.js"></script>
+</head>
+<body>
+    <div style="box-shadow: 0 0 10px #cbcaca;">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"><span
+                    class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                    class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="/index">灾害信息公开</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/piyao">辟谣中心</a>
+                </li>
+                <li class="active">
+                    <a href="/index#materials">急需物资</a>
+                </li>
+                <li>
+                    <a href="/index#situation">救援情况</a>
+                </li>
+                <li>
+                    <a href="/index#message">留言板</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="login">
+                    <a href="/login">登录</a>
+                </li>
+                <li class="dropdown modelList"><!--style="visibility: hidden"-->
+                    <a id="displayName" href="#" class="dropdown-toggle" data-toggle="dropdown">username<strong
+                            class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="height: 50px"></div>
+
+    <div style="width: 90%;margin: auto;">
+        <div id='title-info' class='a-title'>待救援信息汇总</div>
+        <div id='title-my' class='a-title' style='padding-left: 50px'>我的救援</div>
+    </div>
+
+    <div id="table-info" style="width: 90%;margin: auto;">
+        <table class="table table-hover">
+            <caption>待救援信息汇总</caption>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>联系电话</th>
+                    <th>详细地址</th>
+                    <th>描述</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tanmay</td>
+                    <td>Bangalore</td>
+                    <td>560001</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="paging">
+        <div class="pageNum">
+            <span title="上一页" class="disabled" id="up"><&nbsp;</span>
+            <label>
+                <span>页数</span>
+                <select class="currPage">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <span class="realPageNum">/ 17 </span>
+            </label>
+            <span title="下一页" class="pageSpan" id="down">&nbsp;></span>
+        </div>
+    </div>
+    
+</body>
+</html>

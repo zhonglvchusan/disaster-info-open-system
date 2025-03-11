@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>灾害信息辟谣中心</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/piyao.css">
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/piyao.js"></script>
+    <script src="js/userBarCtrl.js"></script>
+
+</head>
+<body>
+<div class="container" style="width: 100%;">
+    <div class="shadow">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"><span
+                    class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                    class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="/index">灾害信息公开</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/piyao">辟谣中心</a>
+                </li>
+                <li class="active">
+                    <a href="/index#materials">急需物资</a>
+                </li>
+                <li>
+                    <a href="/index#situation">救援情况</a>
+                </li>
+                <li>
+                    <a href="/index#message">留言板</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="login">
+                    <a href="/login">登录</a>
+                </li>
+                <li class="dropdown modelList"><!--style="visibility: hidden"-->
+                    <a id="displayName" href="#" class="dropdown-toggle" data-toggle="dropdown">username<strong
+                            class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <div class="area">
+        <div class="area-header">
+            <span>辟谣数据</span>
+        </div>
+        <div class="area-content">
+            <div class="area-content-total">
+                <p id="total-number" class="total-number">1207595</p>
+                <p class="total-title">已辟谣文章数</p>
+            </div>
+            <div class="area-content-total">
+                <p id="yes-total-number" class="total-number">235697</p>
+                <p class="total-title">昨天科普次数</p>
+            </div>
+        </div>
+    </div>
+    <div class="area">
+        <div class="area-header">
+            <span>辟谣专栏</span>
+        </div>
+        <div class="area-titlelist">
+            <ul class="area-ul-titlelist">
+                <li>
+                    <a href="#" class="area-li-titlelist">
+                        <div class="rumor">
+                            <div class="icon_rumor">谣言</div>
+                            <div class="rumor-date">2017-05-26</div>
+                            <div class="rumor-title">千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！全国一夜之间传疯了</div>
+                        </div>
+                        <div class="rumor-tips">已辟谣</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="area-li-titlelist">
+                        <div class="rumor">
+                            <div class="icon_rumor">谣言</div>
+                            <div class="rumor-date">2017-05-26</div>
+                            <div class="rumor-title">能种在阳台上的“抗癌药”</div>
+                        </div>
+                        <div class="rumor-tips">已辟谣</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pagination">
+            <a href="#" class="btn page-previous"><div class="triangle-left"></div></a>
+            <span class="page">
+                <span class="page-now">1</span>
+                <span>/</span>
+                <span class="page-total">11</span>
+            </span>
+            <a href="#" class="btn page-next"><div class="triangle-right"></div></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

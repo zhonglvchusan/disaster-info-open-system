@@ -1,0 +1,58 @@
+.shadow {
+    box-shadow: 0 0 10px #cbcaca;
+    width: 102%;
+    margin-left: -15px;
+}
+
+.modelList {
+    visibility: hidden;
+}
+
+.btn-box{
+    width: 800px;
+    padding-top: 30px;
+    margin: auto;
+}
+
+.box{
+    width: 800px;
+    padding-top: 50px;
+    position: absolute;
+    margin-left: 335px;
+}
+
+.btn{
+    width: 300px;
+    height: 40px;
+    margin: 0 30px;
+}
+
+.input-diy{
+    display: flex;
+    margin-top: 40px;
+    line-height: 22px;
+}
+
+.material-input-diy{
+    display: flex;
+    margin-top: 40px;
+    line-height: 22px;
+}
+
+.input-diy span{
+    width: 150px;
+    text-align: justify;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-left: 30px;
+    text-align-last: justify;
+}
+
+.material-input-diy span{
+    width: 180px;
+    text-align: justify;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-left: 30px;
+    text-align-last: justify;
+}
