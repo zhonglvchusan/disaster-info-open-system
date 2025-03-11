@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "actable.model.pack",
+      "type": "java.lang.String",
+      "description": "Description for actable.model.pack."
+    },
+    {
+      "name": "actabel.table.auto",
+      "type": "java.lang.String",
+      "description": "Description for actabel.table.auto."
+    },
+    {
+      "name": "actable.database.type",
+      "type": "java.lang.String",
+      "description": "Description for actable.database.type."
+    }
+  ] }

@@ -1,0 +1,70 @@
+.shadow {
+    box-shadow: 0 0 10px #cbcaca;
+    width: 102%;
+    margin-left: -15px;
+}
+
+.modelList {
+    visibility: hidden;
+}
+
+.box {
+    width: 1200px;
+    margin: auto;
+}
+
+.title {
+    height: 171px;
+}
+
+.p1 {
+    font-size: 15px;
+}
+
+
+.p2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 24px 0;
+}
+
+.p3 {
+    font-size: 14px;
+    color: #999999;
+}
+
+.p4{
+    color: #666666;
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.textBody .p5{
+    width: auto;
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 30px;
+    text-indent: 40px;
+}
+
+.p6 {
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 30px;
+    text-align: right;
+}
+
+.p7 {
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 30px;
+    text-align: right;
+}
+
+.p4 span {
+    display: inline;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}

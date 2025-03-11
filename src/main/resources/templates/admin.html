@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>灾害信息公开网站后台</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/admin.js"></script>
+
+</head>
+<body>
+<div class="container" style="width: 100%;">
+    <div class="shadow">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"><span
+                    class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                    class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="/admin">灾害信息公开</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li  id="dropdownMenu1" class="active">
+                    <a data-toggle="dropdown">信息管理
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#a">上传灾区照片</a>
+                        </li>
+                        <li>
+                            <a href="#b">提交权威发布文章</a>
+                        </li>
+                        <li>
+                            <a href="#c">审核物资申请</a>
+                        </li>
+                        <li>
+                            <a href="#d">审核救援信息</a>
+                        </li>
+                        <li>
+                            <a href="#e">澄清谣言</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="dropdownMenu2" class="active">
+                    <a data-toggle="dropdown">用户管理
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#f">修改用户权限</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#situation" style="width:200px; position: absolute; margin-left: 950px;">欢迎您，政府办公室管理员</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="area">
+        <div id="dropdownItem1">
+            <!-- 上传灾区照片 -->
+            <div id="dropdownItem1-one" class="show">
+                <div class="dropdownItem-title">上传灾区照片</div>
+                <div class="dropdownItem1-one01 dropdownItem-margin">
+                    <form id="uploadForm" method="post" enctype="multipart/form-data">
+                            <input class="dropdownItem-margin" type="file" name="file" id="dropdownItem1-one-file" accept="image/jpg,image/jpeg,image/png,image/PNG">
+                            <p class="dropdownItem-margin">
+                                <lable>读取进度：</lable>
+                                <progress id="dropdownItem1-one-progress" value="0" max="100"></progress>
+                            </p>
+                            <button class="dropdownItem-margin btn btn-danger" id="dropdownItem1-one-abort">中断</button>
+                            <button class="dropdownItem-margin btn btn-primary" id="dropdownItem1-one-load">上传</button>
+                    </form>
+                </div>
+            </div>
+            <!-- 提交权威发布文章 -->
+            <div id="dropdownItem1-two">
+                <div class="dropdownItem-title">提交权威发布文章</div>
+                <div class="dropdownItem1-two01 dropdownItem-margin show">
+                    <button type="button" class="btn btn-primary">发布文章</button>
+                    <table class="table table-striped">
+                        <tr>
+                            <th>标题</th>
+                            <th>内容</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td>能种在阳台上的“抗癌药”</td>
+                            <td>千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！</td>
+                            <td>2017-05-26</td>
+                            <td><button type="button" class="btn btn-danger">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td>能种在阳台上的“抗癌药”</td>
+                            <td>千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！全国一夜之间传疯了千万不要吃了，马上扔掉！</td>
+                            <td>2017-05-26</td>
+                            <td><button type="button" class="btn btn-danger">删除</button></td>
+                        </tr>
+                    </table>
+                    <div class="pagination">
+                        <a href="#" class="btn page-previous"><div class="triangle-left"></div></a>
+                        <span class="page">
+                            <span class="page-now">1</span>
+                            <span>/</span>
+                            <span class="page-total">11</span>
+                        </span>
+                        <a href="#" class="btn page-next"><div class="triangle-right"></div></a>
+                    </div>
+                </div>
+                <div class="dropdownItem1-two02 hidden">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"><span>标题</span>：</label>
+                          <div class="col-sm-10">
+                            <input id="auth-title" type="text" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label  class="col-sm-2 control-label"><span>内容</span>：</label>
+                          <div class="col-sm-10">
+                            <textarea id="auth-msg" class="form-control" rows="8"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">提交</button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+            <!-- 审核物资申请 -->
+            <div id="dropdownItem1-three">
+                <div class="dropdownItem-title">审核物资申请</div>
+                <div class="dropdownItem1-three01 dropdownItem-margin">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td><button type="button" class="btn btn-danger">3</button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td><button type="button" class="btn btn-danger">3</button></td>
+                        </tr>
+                    </table>
+                    <div class="pagination">
+                        <a href="#" class="btn page-previous"><div class="triangle-left"></div></a>
+                        <span class="page">
+                            <span class="page-now">1</span>
+                            <span>/</span>
+                            <span class="page-total">11</span>
+                        </span>
+                        <a href="#" class="btn page-next"><div class="triangle-right"></div></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 审核救援信息 -->
+            <div id="dropdownItem1-four">
+                <div class="dropdownItem-title">审核救援信息</div>
+                <div class="dropdownItem1-four01 dropdownItem-margin">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td><button type="button" class="btn btn-danger">7</button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td><button type="button" class="btn btn-danger">7</button></td>
+                        </tr>
+                    </table>
+                    <div class="pagination">
+                        <a href="#" class="btn page-previous"><div class="triangle-left"></div></a>
+                        <span class="page">
+                            <span class="page-now">1</span>
+                            <span>/</span>
+                            <span class="page-total">11</span>
+                        </span>
+                        <a href="#" class="btn page-next"><div class="triangle-right"></div></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 澄清谣言 -->
+            <div id="dropdownItem1-five">
+                <div class="dropdownItem-title">澄清谣言</div>
+                <div class="dropdownItem1-five01 dropdownItem-margin show">
+                    <button type="button" class="btn btn-primary">发布文章</button>
+                    <table class="table table-striped">
+                    </table>
+                    <div class="pagination">
+                        <a href="#" class="btn page-previous"><div class="triangle-left"></div></a>
+                        <span class="page">
+                            <span class="page-now">1</span>
+                            <span>/</span>
+                            <span class="page-total">11</span>
+                        </span>
+                        <a href="#" class="btn page-next"><div class="triangle-right"></div></a>
+                    </div>
+                </div>
+                <div class="dropdownItem1-five02 hidden">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                          <label  class="col-sm-2 control-label"><span>标题</span>：</label>
+                          <div class="col-sm-10">
+                            <input id="piyao-title" type="text" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label  class="col-sm-2 control-label"><span>内容</span>：</label>
+                          <div class="col-sm-10">
+                            <textarea id="piyao-msg" class="form-control" rows="8"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">提交</button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+        <div id="dropdownItem2">
+            <!-- 修改用户权限 -->
+            <div id="dropdownItem2-one">
+                <div class="dropdownItem-title">修改用户权限</div>
+                <div class="dropdownItem1-five01 dropdownItem-margin show">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>标题</th>
+                            <th>内容</th>
+                            <th>时间</th>
+                            <th>权限</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    select <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <a href="#" class="btn page-previous"><div class="triangle-left"></div></a>
+                    <span class="page">
+                            <span class="page-now">1</span>
+                            <span>/</span>
+                            <span class="page-total">11</span>
+                        </span>
+                    <a href="#" class="btn page-next"><div class="triangle-right"></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 读取file的js文件 -->
+<script src="js/loadFile.js"></script>
+
+</body>
+</html>
